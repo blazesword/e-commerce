@@ -1,0 +1,97 @@
+Login.html :
+<!DOCTYPE html>
+<html><head>
+<title>Bootstrap Example</title>
+</head>
+<body>
+<div class="jumbotron">
+  <div class="container text-center">
+    <center>
+    <img src="logo.png" class="img-responsive" style="width:50%" alt="Image"></center>
+  </div>
+</div>
+<div class="container"> 
+  <div class="row">
+<div class="col-sm-center">
+      <div class="panel panel-danger">
+        <div class="panel-heading" bgcolor="grey">User Login</div>
+        <div class="panel-body"><center>
+<h1>Login Page</h1>
+<br><br><br><br>
+<form action="LoginServlet" method="post">
+Name:      <input type="text" name="uname"><br><br><br>
+Password: <input type="password" name="password"><br><br><br><br><br>
+<input type="submit" value="Login">
+</form>
+</center></div>
+        <div class="panel-footer">New User ? Click <a href="Signup.jsp"> here to SignUp</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>
+
+
+
+HOME-
+<%@ page import="Ls.LoginServlet" import="java.io.PrintWriter" import="javax.servlet.http.Cookie" language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title></head>
+<body>
+<%
+Cookie ck1[]=request.getCookies();
+String u=(String)ck1[0].getValue();
+%>
+<div class="jumbotron">
+  <div class="container text-center">
+    <center>    <img src="logo.png" class="img-responsive" style="width:50%" alt="Image"></center></div></div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="Home.jsp">Home</a></li>
+        <li><a href="Products.jsp">Products</a></li>
+        <li><a href="Deals.html">Deals</a></li>
+                <li><a href="Contact.jsp">Contact</a></li></ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Profile.jsp"><span class="glyphicon glyphicon-user"></span>Hello,<%= u %></a></li>
+        <li><a href="ViewCartServlet"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+      </ul>    </div>  </div></nav>
+<div id="top-modules">
+  <div class="journal2_simple_slider hide-on-phone" style="background-color: rgb(50, 50, 50); padding-top: 0px; padding-bottom: 0px">
+          <div id="journal-simple-slider-1122875242">
+         <div class="swiper-container swiper-container-horizontal">
+            <div class="swiper-wrapper" style="transition-duration: 0ms; ">
+            <div class="item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-prev" data-swiper-slide-index="0" style="width: 716px;">
+            <a href="https://www.comicsense.xyz/cashback-coupons-offers-sale-discounts" target="_blank"><img width="1220" height="90" src="https://www.comicsense.xyz/image/cache/banner%20catg/coupon_in_banner-1220x90h.jpg" alt="coupon banner"></a></div></div></div></div></div></div></div>
+<br><br><br><br>
+
+<div id="content" style=" color:white; background-color: rgb(66, 155, 244); "><h2><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SHOP BY FANDOM</b></h2></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">ATTACK ON TITAN</div>
+        <div class="panel-body"><a href="Aot.jsp"><img src="aot.png" class="img-responsive" style="width:100%" alt="Image"></a></div>
+        <div class="panel-footer"><a href="Aot.jsp"><i>Click here to view products</i></a></div>
+      </div>    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-danger">
+        <div class="panel-heading">ONE PIECE</div>
+        <div class="panel-body"><a href="OnePiece.jsp"><img src="op.png" class="img-responsive" style="width:100%" alt="Image"></a></div>
+        <div class="panel-footer"><a href="OnePiece.jsp"><i>Click here to view products</i></a></div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-success">
+        <div class="panel-heading">DEATH NOTE</div>
+        <div class="panel-body"><a href="deathnote.jsp"><img src="dn.png" class="img-responsive" style="width:100%" alt="Image"></a></div>
+        <div class="panel-footer"><a href="deatnote.jsp"><i>Click here to view products</i></a></div>
+      </div>    </div>
+  </div>
+</div><br><br><br>
+</body>
+</html>
